@@ -17,12 +17,12 @@ export const Register = () => {
       ...user,
       [name]: value,
     });
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(user);
-  }
+  };
 
   return (
     <>
@@ -35,7 +35,7 @@ export const Register = () => {
                   src="/images/register.png"
                   alt="a user is trying to do registration"
                   width="500"
-                  height="500"
+                  height="400"
                 />
               </div>
 
@@ -69,7 +69,6 @@ export const Register = () => {
                       autoComplete="off"
                       value={user.email}
                       onChange={handleInput}
-
                     ></input>
                   </div>
 
@@ -84,7 +83,6 @@ export const Register = () => {
                       autoComplete="off"
                       value={user.phone}
                       onChange={handleInput}
-
                     ></input>
                   </div>
 
@@ -99,7 +97,6 @@ export const Register = () => {
                       autoComplete="off"
                       value={user.password}
                       onChange={handleInput}
-
                     ></input>
                   </div>
 

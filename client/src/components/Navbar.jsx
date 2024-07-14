@@ -7,7 +7,7 @@ export const Navbar = () => {
       <header>
         <div className="container">
           <div className="logo-brand">
-            <NavLink to="/">RAJ PATEL</NavLink>
+            <a href="/">RAJ PATEL</a>
           </div>
 
           <nav>
@@ -30,7 +30,6 @@ export const Navbar = () => {
               <li>
                 <NavLink to="/register"> SignUp </NavLink>
               </li>
-              
             </ul>
           </nav>
         </div>
