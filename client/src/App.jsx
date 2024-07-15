@@ -7,6 +7,7 @@ import { Register } from "./pages/Register/";
 import { Login } from "./pages/Login";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { Error } from "./pages/Error";
 
 const App = () => {
   return (
@@ -16,10 +17,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
           <Route path="/service" element={<Service />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </BrowserRouter>

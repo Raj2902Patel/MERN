@@ -16,7 +16,7 @@ export const Login = () => {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(user);
   };
@@ -25,34 +25,33 @@ export const Login = () => {
     <>
       <section>
         <main>
-          <div className="section-register">
+          <div className="section-registration">
             <div className="container grid grid-two-cols">
               <div className="registration-image">
                 <img
                   src="/images/login.png"
-                  alt="a user is trying to do login"
+                  alt="let's fill the login page"
                   width="500"
-                  height="400"
+                  height="500"
                 />
               </div>
-
-              <div className="registration-from">
-                <h1 className="main-heading mb-3">Registration Form</h1>
+              {/* registration form */}
+              <div className="registration-form">
+                <h1 className="main-headimg mb-3">Login Form</h1>
                 <br />
-
                 <form onSubmit={handleSubmit}>
                   <div>
-                    <label htmlFor="email">email</label>
+                    <label htmlFor="email">Email</label>
                     <input
                       type="email"
                       name="email"
-                      placeholder="enter your email"
+                      placeholder="Enter Your Email"
                       id="email"
                       required
                       autoComplete="off"
                       value={user.email}
                       onChange={handleInput}
-                    ></input>
+                    />
                   </div>
 
                   <div>
@@ -60,17 +59,15 @@ export const Login = () => {
                     <input
                       type="password"
                       name="password"
-                      placeholder="enter your password"
+                      placeholder="Enter Your Password"
                       id="password"
                       required
                       autoComplete="off"
                       value={user.password}
                       onChange={handleInput}
-                    ></input>
+                    />
                   </div>
-
                   <br />
-
                   <button type="submit" className="btn btn-submit">
                     Register Now
                   </button>

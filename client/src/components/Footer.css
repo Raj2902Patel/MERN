@@ -1,35 +1,12 @@
-/* .footer {
-  background-color: rgb(0, 47, 128);
-  width: 100%;
-  bottom: 0;
-  color: white;
-  font-size: 25px;
+footer {
+  background: var(--btn-color);
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  padding: 20px;
   text-align: center;
-  height: 4.2rem;
-} */
-
-.footer {
-  text-transform: capitalize;
-  text-align: center;
-  position: fixed;
-  padding-bottom: 60px;
+  position: absolute;
+  right: 0;
   left: 0;
   bottom: 0;
-  right: 0;
-  padding: 1rem 2.2rem;
-  font-size: 1.7rem;
-  font-weight: 500;
-  background-color: var(--btn-color);
-  /* border-radius: 0.8rem; */
-  /* -webkit-border-radius: 0.8rem;
-  -moz-border-radius: 0.8rem;
-  -ms-border-radius: 0.8rem;
-  -o-border-radius: 0.8rem; */
-  border: 0.1rem solid transparent;
-  letter-spacing: 0.1rem;
-  /* transition: border-color 0.3s;
-  -webkit-transition: border-color 0.3s;
-  -moz-transition: border-color 0.3s;
-  -ms-transition: border-color 0.3s;
-  -o-transition: border-color 0.3s; */
 }

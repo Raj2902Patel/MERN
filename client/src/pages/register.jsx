@@ -8,8 +8,9 @@ export const Register = () => {
     password: "",
   });
 
+  // handling the input values
   const handleInput = (e) => {
-    // console.log(e);
+    console.log(e);
     let name = e.target.name;
     let value = e.target.value;
 
@@ -19,6 +20,7 @@ export const Register = () => {
     });
   };
 
+  // handling the form
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(user);
@@ -28,48 +30,47 @@ export const Register = () => {
     <>
       <section>
         <main>
-          <div className="section-register">
+          <div className="section-registration">
             <div className="container grid grid-two-cols">
               <div className="registration-image">
                 <img
                   src="/images/register.png"
-                  alt="a user is trying to do registration"
+                  alt="a user is trying to register"
                   width="500"
-                  height="400"
+                  height="500"
                 />
               </div>
-
-              <div className="registration-from">
-                <h1 className="main-heading mb-3">Registration Form</h1>
+              {/* registration form */}
+              <div className="registration-form">
+                <h1 className="main-headimg mb-3">Registration Form</h1>
                 <br />
-
                 <form onSubmit={handleSubmit}>
                   <div>
-                    <label htmlFor="username">username</label>
+                    <label htmlFor="username">Username</label>
                     <input
                       type="text"
                       name="username"
-                      placeholder="username"
+                      placeholder="Enter Your Username"
                       id="username"
                       required
                       autoComplete="off"
                       value={user.username}
                       onChange={handleInput}
-                    ></input>
+                    />
                   </div>
 
                   <div>
-                    <label htmlFor="email">email</label>
+                    <label htmlFor="email">Email</label>
                     <input
                       type="email"
                       name="email"
-                      placeholder="enter your email"
+                      placeholder="Enter Your Email"
                       id="email"
                       required
                       autoComplete="off"
                       value={user.email}
                       onChange={handleInput}
-                    ></input>
+                    />
                   </div>
 
                   <div>
@@ -77,13 +78,13 @@ export const Register = () => {
                     <input
                       type="number"
                       name="phone"
-                      placeholder="phone"
+                      placeholder="Enter Your Phone"
                       id="phone"
                       required
                       autoComplete="off"
                       value={user.phone}
                       onChange={handleInput}
-                    ></input>
+                    />
                   </div>
 
                   <div>
@@ -91,17 +92,15 @@ export const Register = () => {
                     <input
                       type="password"
                       name="password"
-                      placeholder="enter your password"
+                      placeholder="Enter Your Password"
                       id="password"
                       required
                       autoComplete="off"
                       value={user.password}
                       onChange={handleInput}
-                    ></input>
+                    />
                   </div>
-
                   <br />
-
                   <button type="submit" className="btn btn-submit">
                     Register Now
                   </button>
