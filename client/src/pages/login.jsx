@@ -95,7 +95,7 @@ const navigate = useNavigate();
                   </div>
                   <br />
                   <button type="submit" className="btn btn-submit">
-                    Register Now
+                    Login
                   </button>
                 </form>
               </div>
