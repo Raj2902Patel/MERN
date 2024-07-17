@@ -1,11 +1,14 @@
+import { useAuth } from "../store/auth";
+
 export const About = () => {
+  const { user } = useAuth();
   return (
     <>
       <main>
         <section className="section-hero">
           <div className="container grid grid-two-cols">
             <div className="hero-content">
-              <p>RAJ PATEL</p>
+              <p>Welcome, {user ? `${user.username} to our website` : " to our website"}</p>
               <h1>Welcome to MERN</h1>
 
               <p>
