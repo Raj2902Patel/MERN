@@ -50,6 +50,7 @@ export const Contact = () => {
                   type="text"
                   name="username"
                   id="username"
+                  placeholder="username"
                   autoComplete="off"
                   required
                   value={contact.username}
@@ -63,6 +64,7 @@ export const Contact = () => {
                   type="text"
                   name="email"
                   id="email"
+                  placeholder="email"
                   autoComplete="off"
                   required
                   value={contact.email}
@@ -77,6 +79,7 @@ export const Contact = () => {
                   id="message"
                   cols="30"
                   rows="6"
+                  placeholder="message"
                   autoComplete="off"
                   required
                   value={contact.message}
