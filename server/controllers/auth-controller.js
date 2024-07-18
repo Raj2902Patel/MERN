@@ -17,7 +17,7 @@ const register = async (req, res) => {
     const userExist = await User.findOne({ email });
 
     if (userExist) {
-      return res.status(400).json({ msg: "email already exist" });
+      return res.status(400).json({ message: "Email Already Exist" });
     }
 
     // hash the password
@@ -63,16 +63,15 @@ const login = async (req, res) => {
   }
 };
 
-
-const user = async (req,res) => {
+const user = async (req, res) => {
   try {
     const userData = req.user;
     console.log(userData);
-    return res.status(200).json({userData})
+    return res.status(200).json({ userData });
     // res.status(200).json({msg: 'hi user'});
-  } catch(error) {
+  } catch (error) {
     console.log(`error from the user router ${error}`);
   }
-} 
+};
 
-module.exports = { home, register, login, user};
+module.exports = { home, register, login, user };

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
+import { toast } from "react-toastify";
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -9,7 +10,7 @@ export const Login = () => {
   });
 
   const navigate = useNavigate();
-  const {storetokenInLS} = useAuth();
+  const { storetokenInLS } = useAuth();
 
   const handleInput = (e) => {
     let name = e.target.name;
@@ -35,16 +36,19 @@ export const Login = () => {
 
       console.log("Login Form", response);
 
+      const res_data = await response.json();
+
       if (response.ok) {
-        alert("Login Successfull");
-        const res_data = await response.json();
+        toast.success("Login Successfull");
 
         storetokenInLS(res_data.token);
 
         setUser({ email: "", password: "" });
         navigate("/");
       } else {
-        alert("Invalid Credentials");
+        toast.error(
+          res_data.extraDetails ? res_data.extraDetails : res_data.message
+        );
         console.log("Invalid Credentials");
       }
     } catch (error) {
