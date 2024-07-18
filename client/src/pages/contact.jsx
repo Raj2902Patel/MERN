@@ -102,7 +102,7 @@ export const Contact = () => {
               <div>
                 <label htmlFor="email">email</label>
                 <input
-                  type="text"
+                  type="email"
                   name="email"
                   id="email"
                   placeholder="email"
