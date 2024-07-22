@@ -73,11 +73,15 @@ export const AdminUsers = () => {
                     <td>{curUser.email}</td>
                     <td>{curUser.phone}</td>
                     <td>
-                      <Link to={`/admin/users/${curUser._id}/edit`}>Edit</Link>
+                      <button>
+                        <Link to={`/admin/users/${curUser._id}/edit`}>
+                          <font color="white">EDIT</font>
+                        </Link>
+                      </button>
                     </td>
                     <td>
                       <button onClick={() => deleteUser(curUser._id)}>
-                        Delete
+                        DELETE
                       </button>
                     </td>
                   </tr>
